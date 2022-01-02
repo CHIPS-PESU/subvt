@@ -9,11 +9,5 @@ This documentation contains the tool flow for designing Sub-Threshold Standard C
 
    This project is under active development.
 
-Contents
---------
-
-.. toctree::
-   Theory
-   Toolflow
-   Results
-   References
+   .. autosummary::
+   :toctree: generated
