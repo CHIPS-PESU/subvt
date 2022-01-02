@@ -1,5 +1,5 @@
 Theory
-===
+======
 
 The Metal Oxide Semiconductor Field Effect Transistor is a type of insulated-gate field-effect transistor that is fabricated by the controlled oxidation
 of a semiconductor, typically silicon. A MOSFET can be described as a voltage-controlled current source in electrical terms, here it operates as a switch
