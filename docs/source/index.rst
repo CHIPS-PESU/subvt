@@ -1,13 +1,9 @@
-Welcome to Lumache's documentation!
-===================================
+Welcome to Sub-Threshold Standard Cell Design's documentation!
+==============================================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+In the present era of high-density and high-speed nanoelectronics, power consumption has been one of the most concerning factors.  Hence there is a rapidly growing demand for ultra-low power devices and advanced energy-saving methods for digital integrated circuits. The need for low-power circuits has up to now been limited to a small number of products, but this situation has changed drastically in the last few years, primarily because of the growing need for portability in computing and telecommunication products.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+This documentation contains the tool flow for designing Sub-Threshold Standard Cells and all the results obtained so far.
 
 .. note::
 
