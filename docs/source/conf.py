@@ -2,8 +2,8 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2022, Centre for Heterogeneous and Intelligent Processing Systems'
+project = 'Sub-Threshold Standard Cell Design'
+copyright = '2022, CHIPS'
 author = 'Karthik B K'
 
 release = '0.1'
