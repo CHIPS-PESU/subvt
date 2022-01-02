@@ -1,2 +1,5 @@
+Results
+=======
+
 .. autosummary::
    :toctree: generated
