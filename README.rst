@@ -1,9 +1,6 @@
-Template for the Read the Docs tutorial
+Project Documentation for Sub-Threshold Standard Cell Design
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+Hosted on `Read the Docs`.
 
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+Contributors: Karthik B K <bkkarthik@pesu.pes.edu>
