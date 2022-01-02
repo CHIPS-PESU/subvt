@@ -25,7 +25,7 @@ one of its neighbors creating a positively charged hole. This hole can propagate
 This is called a p-type semiconductor.
 
 The operating principle of a transistor, e.g. MOSFET, is based on the diode effect of a semiconductor. Depending on the types of dopants used, different kinds
-of MOSFETs with varying functionality can be built. The below image describes the cross-section of an n-type and p-ype MOSFET[2].
+of MOSFETs with varying functionality can be built. The below image describes the cross-section of an n-type and p-ype MOSFET [2].
 
 .. image:: assets/p_and_nfet.png
 
@@ -93,8 +93,6 @@ To transition from the logic design to a physical layout, a set of masks has to 
 of the different transistor parts, e.g. n-well, poly-silicon, n- and p-type diffusion zones, metal, and contact layers. The designer has to follow design
 rules specified by the manufacturer that depend on the production process. They constrain for example the sizes of and distances between specific parts.
 Generally, smaller scales require more complex design rules making it difficult to adapt a layout to a new manufacturing process.
-
-
 
 .. autosummary::
    :toctree: generated
