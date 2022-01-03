@@ -51,7 +51,7 @@ All these parameters are normalised to lie between 0 and 1, and compute the trad
 
 We use the `mvarsearch` construct within `SpectreMDL` to perform the optimization.
 
-.. code::
+.. code:: RST
    mvarsearch
     {
 
@@ -79,7 +79,7 @@ We use the `mvarsearch` construct within `SpectreMDL` to perform the optimizatio
 
 The option_statements include:
 
-.. code::
+.. code:: RST
    [ method = method ]
    [ accuracy = conv_tol ]
    [ deltax = diff_tol ]
@@ -99,7 +99,7 @@ following happens:
 | -tmp1 and tmp2 satisfy the conv_tool criteria determined by the following equation: (tmp1*tmp1 + tmp2*tmp2) < 1.0e-03
 | the maxiter parameter value is exceeded
 
-.. code::
+.. code:: RST
    alias measurement trans {
    run tran( stop=1u, autostop='yes )
        export real rise=risetime(sig=V(d), initval=0, inittype='y, finalval=3.0, 
