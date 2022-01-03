@@ -100,6 +100,11 @@ Energy was plotted against execution time for benchmarks from Embench-IoT.
 .. image:: assets/color-energy.png
    :align: center
 
+Standard cell sizing has to be optimised such that the energy consumption is below that of super-threshold synthesis.
+
+.. warning::
+   I have not synthesized any designs post the transistor sizing, as optimisation itself is still a work in progress. 
+
 
 .. autosummary::
    :toctree: generated
