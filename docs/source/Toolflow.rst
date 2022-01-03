@@ -52,6 +52,7 @@ All these parameters are normalised to lie between 0 and 1, and compute the trad
 We use the `mvarsearch` construct within `SpectreMDL` to perform the optimization.
 
 .. code:: RST
+   
    mvarsearch
     {
 
@@ -80,6 +81,7 @@ We use the `mvarsearch` construct within `SpectreMDL` to perform the optimizatio
 The option_statements include:
 
 .. code:: RST
+
    [ method = method ]
    [ accuracy = conv_tol ]
    [ deltax = diff_tol ]
@@ -100,6 +102,7 @@ following happens:
 | the maxiter parameter value is exceeded
 
 .. code:: RST
+
    alias measurement trans {
    run tran( stop=1u, autostop='yes )
        export real rise=risetime(sig=V(d), initval=0, inittype='y, finalval=3.0, 
