@@ -9,6 +9,7 @@ of a semiconductor, typically silicon. A MOSFET can be described as a voltage-co
 to conduct electricity in charging and discharging circuits. The below image describes the cross-section of an n-type MOSFET [1].
 
 .. image:: assets/mosfet.png
+   :align: center
 
 The voltage of the covered gate determines the electrical conductivity of the device; this ability to change conductivity with the amount of applied voltage
 is used for switching electronic signals. The base material for MOSFETs is the semiconductor silicon (Si) which is a member of Group IV in the periodic table
@@ -28,6 +29,7 @@ The operating principle of a transistor, e.g. MOSFET, is based on the diode effe
 of MOSFETs with varying functionality can be built. The below image describes the cross-section of an n-type and p-ype MOSFET [2].
 
 .. image:: assets/p_and_nfet.png
+   :align: center
 
 For the nFET, the body is p-type silicon with two areas of n-type silicon called source and drain. The source is generally connected to the ground (GND).
 The gate stack, which consists of an insulating layer of SiO2 and the conducting gate terminal made of polysilicon, is placed between the source and drain.
@@ -62,6 +64,7 @@ of the transistor and also influences the time it takes to charge or discharge t
 transistor in more detail. The image below describes the regions of operation in a MOSFET [2].
 
 .. image:: assets/regions.png
+   :align: center
 
 The terminals of a MOSFET are capable of storing electric charge and thus act as a capacitor when a potential difference between two terminals occurs.
 The most obvious is the gate capacitor Cg that can be modeled as a simple plate capacitor with plate size W · L where W is the width and L is the length of
@@ -71,6 +74,7 @@ transistor, called leakage. In a transistor below the threshold voltage, a small
 thermal emission of carriers. In this state, which is also called weak inversion, the drain current is described by the following equation.
 
 .. image:: assets/equation.png
+   :align: center
 
 Hence, a linear dependency between channel length L and width W is observed. Another source of the leakage is the gate leakage Igate caused by electrons
 tunneling through the gate oxide layer. This is related to the type and thickness of the oxide layer, but also linearly dependent on the gate width W.

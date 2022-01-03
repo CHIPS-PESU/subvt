@@ -14,9 +14,7 @@ Project contributors
 --------------------
 
 Karthik B K <bkkarthik@pesu.pes.edu>
-
 Prof. Vinay Reddy <vinay@pes.edu>
-
 Dr. Madhura Purnaprajna <madhurap@pes.edu>
 
 Learn more
