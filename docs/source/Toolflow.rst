@@ -40,58 +40,56 @@ of the squares of the deviations is minimized. We use `Cadence SpectreMDL` to wr
 
 We define 2 `measurement alias` within the MDL control file, and export the following variables for computation:
 
-| fall = falltime(sig=V(OUT), initval=vdd, inittype='y, finalval=0.0, finaltype='y, theta1=90, theta2=10)
-| rise = risetime(sig=V(OUT), initval=0.0, inittype='y, finalval=vdd, finaltype='y, theta1=10, theta2=90)
-| tphl = cross(sig=V(OUT), dir='fall, n=1, thresh=vdd/2) - cross(sig=V(IN), dir='rise, n=1, thresh=vdd/2)
-| tplh = cross(sig=V(OUT), dir='rise, n=1, thresh=vdd/2) - cross(sig=V(IN), dir='fall, n=1, thresh=vdd/2)
-| delay = max(rise, fall) + max(tphl, tplh)
-| energy = integ(I$INAME:pwr, from=starttime, to=stoptime)
+| `fall = falltime(sig=V(OUT), initval=vdd, inittype='y, finalval=0.0, finaltype='y, theta1=90, theta2=10)`
+| `rise = risetime(sig=V(OUT), initval=0.0, inittype='y, finalval=vdd, finaltype='y, theta1=10, theta2=90)`
+| `tphl = cross(sig=V(OUT), dir='fall, n=1, thresh=vdd/2) - cross(sig=V(IN), dir='rise, n=1, thresh=vdd/2)`
+| `tplh = cross(sig=V(OUT), dir='rise, n=1, thresh=vdd/2) - cross(sig=V(IN), dir='fall, n=1, thresh=vdd/2)`
+| `delay = max(rise, fall) + max(tphl, tplh)`
+| `energy = integ(I$INAME:pwr, from=starttime, to=stoptime)`
 
 All these parameters are normalised to lie between 0 and 1, and compute the tradeoff between energy and delay as described in [3].
 
 We use the `mvarsearch` construct within `SpectreMDL` to perform the optimization.
 
-```
-mvarsearch
- {
-    
-option
- {
-        options_statements
-    }
-    
-parameter
- {
-        parameter_statements
-    }
-    
-exec
- {
-        exec_statement -- run statement to compute goal values.
-    }
-    
-zero
- {
-        zero_statements
-    }
-}
-```
+.. code:: text
+   mvarsearch
+    {
+
+   option
+    {
+           options_statements
+       }
+
+   parameter
+    {
+           parameter_statements
+       }
+
+   exec
+    {
+           exec_statement -- run statement to compute goal values.
+       }
+
+   zero
+    {
+           zero_statements
+       }
+   }
+
 
 The option_statements include:
 
-```
-[ method = method ]
-[ accuracy = conv_tol ]
-[ deltax = diff_tol ]
-[ maxiter = maxiter ]
-[ restoreParam = restoreParam ]
-```
+.. code:: text
+   [ method = method ]
+   [ accuracy = conv_tol ]
+   [ deltax = diff_tol ]
+   [ maxiter = maxiter ]
+   [ restoreParam = restoreParam ]
+
 
 The parameter_statements include:
 
-```
-{param_name, init_val, lower_val, upper_val}
-```
+`{param_name, init_val, lower_val, upper_val}`
 
 In the following example design parameters para_pw and para_nw are varied by the optimization algorithm starting at an initial value of 1.2 microns
 with a maximum value of 10 microns and a lower limit of 0.1 microns. At each iteration, the measurement alias trans is run after the design parameter
@@ -101,33 +99,32 @@ following happens:
 | -tmp1 and tmp2 satisfy the conv_tool criteria determined by the following equation: (tmp1*tmp1 + tmp2*tmp2) < 1.0e-03
 | the maxiter parameter value is exceeded
 
-```
-alias measurement trans {
-run tran( stop=1u, autostop='yes )
-    export real rise=risetime(sig=V(d), initval=0, inittype='y, finalval=3.0, 
-       finaltype='y, theta1=10, theta2=90) // measured from 10% to 90% 
-    export real fall=falltime(sig=V(d), initval=3.0, inittype='y, finalval=0.0,
-       finaltype='y, theta1=90, theta2=10) // measured from 10% to 90% 
-}
-mvarsearch {
-    option {
-       accuracy = 1e-3     // convergence tolerance of trans->rise
-       deltax = 1e-3       // numerical difference % of design variables
-       maxiter = 100       // limit to 100 iterations
-    }
-    parameter {
-       {para_pw, 1.2u, 0.1u, 10u}
-       {para_nw, 1.2u, 0.1u, 10u}
-    }
-    exec {
-       run trans
-    }
-    zero {
-       tmp1 = trans->rise - 3ns
-       tmp2 = trans->fall - 3ns 
-    }
-}
-```
+.. code:: text
+   alias measurement trans {
+   run tran( stop=1u, autostop='yes )
+       export real rise=risetime(sig=V(d), initval=0, inittype='y, finalval=3.0, 
+          finaltype='y, theta1=10, theta2=90) // measured from 10% to 90% 
+       export real fall=falltime(sig=V(d), initval=3.0, inittype='y, finalval=0.0,
+          finaltype='y, theta1=90, theta2=10) // measured from 10% to 90% 
+   }
+   mvarsearch {
+       option {
+          accuracy = 1e-3     // convergence tolerance of trans->rise
+          deltax = 1e-3       // numerical difference % of design variables
+          maxiter = 100       // limit to 100 iterations
+       }
+       parameter {
+          {para_pw, 1.2u, 0.1u, 10u}
+          {para_nw, 1.2u, 0.1u, 10u}
+       }
+       exec {
+          run trans
+       }
+       zero {
+          tmp1 = trans->rise - 3ns
+          tmp2 = trans->fall - 3ns 
+       }
+   }
 
 Layout Generation
 -----------------
