@@ -29,6 +29,6 @@ https://chips.pes.edu/projects
 
 .. toctree::
    Theory
-   Toolflow
+   Designflow
    Results
    References
