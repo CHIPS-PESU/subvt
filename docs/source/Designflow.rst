@@ -178,7 +178,7 @@ extracted output netlist and can cause additional simulation problems.
 We only extract the R & C components in our standard cells.
 Post-layout `spice` netlists are obtained after parasitic extraction.
 
-Cell Charecterization
+Cell Characterization
 ---------------------
 
 We use `Cadence Liberate` to perform cell characterization.
