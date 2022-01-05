@@ -79,16 +79,6 @@ Power, Delay and Energy were plotted for a varying supply voltage.
 .. image:: assets/pareto-28.png
    :align: center
 
-With PyMoo [4], we were able to plot the pareto front for UMC 28nm HPC. This plot is for an inverter.
-
-.. image:: assets/pareto.png
-   :align: center
-
-The intermediate results were plotted over generations for varying number of iterations.
-
-.. image:: assets/pymoo-gen.png
-   :align: center
-
 Chromite RV32IMFC was synthesized using UMC 28nm at 2 design goals (supply voltage), 180 mV and 300 mV _without_ any optimization for sizing.
 The following table describes the synthesis results for the same.
 
