@@ -105,6 +105,8 @@ Energy was plotted against execution time for benchmarks from Embench-IoT.
 .. image:: assets/subvt-chromite-matlab.png
    :align: center
 
+Frequency, Power, and Energy were ploted for Chromite RISC-V.
+
 .. image:: assets/color-freq.png
    :align: center
 
