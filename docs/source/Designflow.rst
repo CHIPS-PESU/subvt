@@ -1,10 +1,13 @@
 Design Flow
 ========
 
-Here is a flowchart of the entire design floiw, that has been described in detail below.
+Here is a flowchart of the entire design flow, that has been described in detail below.
 
 .. image:: assets/latest.png
    :align: center
+
+.. note::
+   Please right click on the image and open it in a new tab for a clearer view.
 
 Choosing Transistor Variant
 ---------------------------
